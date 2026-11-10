@@ -1,0 +1,553 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Database Security Dashboard</title>
+
+        <style>
+            body {
+                background: #101827;
+                color: white;
+                font-family: Arial, sans-serif;
+                padding: 30px;
+            }
+
+            h1 { color: #38bdf8; }
+
+            .cards {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin: 25px 0;
+            }
+
+            .card {
+                background: #1e293b;
+                padding: 20px;
+                border-radius: 10px;
+                min-width: 130px;
+            }
+
+            .number {
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #1e293b;
+            }
+
+            th, td {
+                padding: 12px;
+                border: 1px solid #334155;
+                text-align: left;
+                overflow-wrap: anywhere;
+            }
+
+            th { color: #38bdf8; }
+
+            .badge {
+                padding: 5px 9px;
+                border-radius: 5px;
+            }
+
+            .high { background: #991b1b; }
+            .medium { background: #92400e; }
+            .critical { background: #7f1d1d; }
+            .low { background: #166534; }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Database Security Monitoring Dashboard</h1>
+
+        <p>PostgreSQL Security Investigation Report</p>
+
+        <p>Generated: 2026-11-10 16:24:22</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <p>Total Alerts</p>
+                <div class="number">24</div>
+            </div>
+
+            <div class="card">
+                <p>Critical</p>
+                <div class="number">1</div>
+            </div>
+
+            <div class="card">
+                <p>High</p>
+                <div class="number">19</div>
+            </div>
+
+            <div class="card">
+                <p>Medium</p>
+                <div class="number">4</div>
+            </div>
+
+            <div class="card">
+                <p>Low</p>
+                <div class="number">0</div>
+            </div>
+
+        </div>
+        <h2>Security Alert Distribution</h2>
+
+<div style="background:#1e293b; padding:20px; border-radius:10px;">
+    
+        <p>LOW: 0</p>
+        <div style="background:#334155; height:18px; border-radius:8px;">
+            <div style="background:#38bdf8;
+                        width:0.0%;
+                        height:18px;
+                        border-radius:8px;">
+            </div>
+        </div>
+        
+        <p>MEDIUM: 4</p>
+        <div style="background:#334155; height:18px; border-radius:8px;">
+            <div style="background:#38bdf8;
+                        width:21.052631578947366%;
+                        height:18px;
+                        border-radius:8px;">
+            </div>
+        </div>
+        
+        <p>HIGH: 19</p>
+        <div style="background:#334155; height:18px; border-radius:8px;">
+            <div style="background:#38bdf8;
+                        width:100.0%;
+                        height:18px;
+                        border-radius:8px;">
+            </div>
+        </div>
+        
+        <p>CRITICAL: 1</p>
+        <div style="background:#334155; height:18px; border-radius:8px;">
+            <div style="background:#38bdf8;
+                        width:5.263157894736842%;
+                        height:18px;
+                        border-radius:8px;">
+            </div>
+        </div>
+        
+</div>
+        <h2>Detected Security Events</h2>
+
+        <table>
+    <tr>
+        <th>Timestamp</th>
+        <th>Database User</th>
+        <th>Database</th>
+        <th>Source IP</th>
+        <th>Application</th>
+        <th>Alert Type</th>
+        <th>Severity</th>
+        <th>SQL Query</th>
+    </tr>
+<<h2>User Activity Summary</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Database User</th>
+            <th>Alert Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <tr>
+        <td>Multiple/Unknown</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>fake_test_user</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>postgres</td>
+        <td>9</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<h2>Security Alerts</h2>
+
+<table>
+    <!-- Your existing alert table headers -->
+    <tbody>
+        
+        <tr>
+            <td>2026-11-10 13:55:50.629 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:1133634</td>
+            <td>Employee table access</td>
+            <td>
+                <span class="badge medium">
+                    MEDIUM
+                </span>
+            </td>
+            <td>SELECT * FROM employees;</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 14:22:29.739 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:1133634</td>
+            <td>Database modification</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>UPDATE employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 14:58:55.139 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:1133634</td>
+            <td>Database modification</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>UPDATE employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:01:05.976 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:1133634</td>
+            <td>Database modification</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>UPDATE employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:01:08.254 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:1133634</td>
+            <td>Database modification</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>UPDATE employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:06:40.868 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:7340994</td>
+            <td>Database modification</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>UPDATE employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:07:37.119 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:7340994</td>
+            <td>Employee table access</td>
+            <td>
+                <span class="badge medium">
+                    MEDIUM
+                </span>
+            </td>
+            <td>SELECT * FROM employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:07:37.122 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:7340994</td>
+            <td>Employee table access</td>
+            <td>
+                <span class="badge medium">
+                    MEDIUM
+                </span>
+            </td>
+            <td>SELECT * FROM employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 15:07:51.397 PKT</td>
+            <td>postgres</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>pgAdmin 4 - CONN:7340994</td>
+            <td>Employee table access</td>
+            <td>
+                <span class="badge medium">
+                    MEDIUM
+                </span>
+            </td>
+            <td>SELECT * FROM employees</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:04:43.179 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:05:04.948 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:05:34.482 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:21:14.263 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:21:20.176 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:21:24.850 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:21:30.344 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:21:35.404 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:31.099 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:33.177 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:38.123 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_labkjasjdajs</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:40.844 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:47.820 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>2026-11-10 16:22:50.312 PKT</td>
+            <td>fake_test_user</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>[unknown]</td>
+            <td>Failed database login</td>
+            <td>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </td>
+            <td>Unknown</td>
+        </tr>
+        
+        <tr>
+            <td>Multiple attempts</td>
+            <td>Multiple/Unknown</td>
+            <td>guardium_lab</td>
+            <td>::1</td>
+            <td>PostgreSQL</td>
+            <td>Possible Brute Force Attack</td>
+            <td>
+                <span class="badge critical">
+                    CRITICAL
+                </span>
+            </td>
+            <td>14 failed login attempts</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+    </body>
+    </html>
+    

@@ -1,0 +1,159 @@
+===== DATABASE SECURITY INVESTIGATION REPORT =====
+
+Total Alerts: 24
+
+===== SEVERITY BREAKDOWN =====
+LOW: 0
+MEDIUM: 4
+HIGH: 19
+CRITICAL: 1
+
+===== ANALYZED LOG FILES =====
+postgresql-2026-11-10_131543.log
+postgresql-2026-11-10_135052.log
+
+===== DETECTED ALERTS =====
+
+-----------------------------
+Alert: Employee table access
+Severity: MEDIUM
+Line: 2226
+Evidence: 2026-11-10 13:55:50.629 PKT | USER=postgres | DB=guardium_lab | HOST=::1(64412) | APP=pgAdmin 4 - CONN:1133634 | LOG:  statement: SELECT * FROM employees;
+
+-----------------------------
+Alert: Database modification
+Severity: HIGH
+Line: 6650
+Evidence: 2026-11-10 14:22:29.739 PKT | USER=postgres | DB=guardium_lab | HOST=::1(64412) | APP=pgAdmin 4 - CONN:1133634 | LOG:  statement: UPDATE employees
+
+-----------------------------
+Alert: Database modification
+Severity: HIGH
+Line: 10463
+Evidence: 2026-11-10 14:58:55.139 PKT | USER=postgres | DB=guardium_lab | HOST=::1(64412) | APP=pgAdmin 4 - CONN:1133634 | LOG:  statement: UPDATE employees
+
+-----------------------------
+Alert: Database modification
+Severity: HIGH
+Line: 11250
+Evidence: 2026-11-10 15:01:05.976 PKT | USER=postgres | DB=guardium_lab | HOST=::1(64412) | APP=pgAdmin 4 - CONN:1133634 | LOG:  statement: UPDATE employees
+
+-----------------------------
+Alert: Database modification
+Severity: HIGH
+Line: 11253
+Evidence: 2026-11-10 15:01:08.254 PKT | USER=postgres | DB=guardium_lab | HOST=::1(64412) | APP=pgAdmin 4 - CONN:1133634 | LOG:  statement: UPDATE employees
+
+-----------------------------
+Alert: Database modification
+Severity: HIGH
+Line: 12131
+Evidence: 2026-11-10 15:06:40.868 PKT | USER=postgres | DB=guardium_lab | HOST=::1(49182) | APP=pgAdmin 4 - CONN:7340994 | LOG:  statement: UPDATE employees
+
+-----------------------------
+Alert: Employee table access
+Severity: MEDIUM
+Line: 12508
+Evidence: 2026-11-10 15:07:37.119 PKT | USER=postgres | DB=guardium_lab | HOST=::1(49182) | APP=pgAdmin 4 - CONN:7340994 | LOG:  statement: SELECT * FROM employees
+
+-----------------------------
+Alert: Employee table access
+Severity: MEDIUM
+Line: 12512
+Evidence: 2026-11-10 15:07:37.122 PKT | USER=postgres | DB=guardium_lab | HOST=::1(49182) | APP=pgAdmin 4 - CONN:7340994 | STATEMENT:  SELECT * FROM employees
+
+-----------------------------
+Alert: Employee table access
+Severity: MEDIUM
+Line: 12616
+Evidence: 2026-11-10 15:07:51.397 PKT | USER=postgres | DB=guardium_lab | HOST=::1(49182) | APP=pgAdmin 4 - CONN:7340994 | LOG:  statement: SELECT * FROM employees
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16110
+Evidence: 2026-11-10 16:04:43.179 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(50682) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16115
+Evidence: 2026-11-10 16:05:04.948 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(50691) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16154
+Evidence: 2026-11-10 16:05:34.482 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(50699) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16703
+Evidence: 2026-11-10 16:21:14.263 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51021) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16708
+Evidence: 2026-11-10 16:21:20.176 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51033) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16713
+Evidence: 2026-11-10 16:21:24.850 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51035) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16718
+Evidence: 2026-11-10 16:21:30.344 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51038) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16723
+Evidence: 2026-11-10 16:21:35.404 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51041) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16762
+Evidence: 2026-11-10 16:22:31.099 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51057) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16767
+Evidence: 2026-11-10 16:22:33.177 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51059) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16772
+Evidence: 2026-11-10 16:22:38.123 PKT | USER=fake_test_user | DB=guardium_labkjasjdajs | HOST=::1(51061) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16777
+Evidence: 2026-11-10 16:22:40.844 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51064) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16782
+Evidence: 2026-11-10 16:22:47.820 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51068) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Failed database login
+Severity: HIGH
+Line: 16787
+Evidence: 2026-11-10 16:22:50.312 PKT | USER=fake_test_user | DB=guardium_lab | HOST=::1(51070) | APP=[unknown] | FATAL:  password authentication failed for user "fake_test_user"
+
+-----------------------------
+Alert: Possible Brute Force Attack
+Severity: CRITICAL
+Line: Multiple
+Evidence: 14 failed login attempts from ::1
